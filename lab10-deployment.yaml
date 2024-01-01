@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lab10-deployment
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: lab10-app
+  template:
+    metadata:
+      labels:
+        app: lab10-app
+    spec:
+      containers:
+        - name: lab10-app
+          image: ybalath/lab10-app:1.0.0
+      updateStrategy:
+        type: RollingUpdate
+        rollingUpdate:
+          maxSurge: 5
+          maxUnavailable: 2
