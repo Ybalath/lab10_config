@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: lab10-app
-          image: ybalath/lab10-app:1.0.0
+          image: ybalath/lab10-app:1.0.2
       updateStrategy:
         type: RollingUpdate
         rollingUpdate:
