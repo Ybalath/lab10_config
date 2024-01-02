@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: lab10-app
-  updateStrategy:
+  strategy:
     type: RollingUpdate
     rollingUpdate:
       maxSurge: 5
