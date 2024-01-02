@@ -15,8 +15,8 @@ spec:
       containers:
         - name: lab10-app
           image: ybalath/lab10-app:1.0.3
-      updateStrategy:
-        type: RollingUpdate
-        rollingUpdate:
-          maxSurge: 5
-          maxUnavailable: 2
+    updateStrategy:
+      type: RollingUpdate
+      rollingUpdate:
+        maxSurge: 5
+        maxUnavailable: 2
